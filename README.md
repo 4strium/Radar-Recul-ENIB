@@ -72,7 +72,8 @@ $$ \epsilon < 0 \Leftrightarrow V_{sat_-}\cdot \left( \frac{R4}{R4+R5} \right) <
 
 On peut donc affirmer que les deux tensions seuil sont les suivantes :
 
-$$ \left\{ \begin{array}{rcl} V_{seuil_1} = V_{sat_-}\cdot \left( \frac{R4}{R4+R5} \right) \\  V_{seuil_2} = V_{sat_+}\cdot \left( \frac{R4}{R4+R5} \right) \end{array} \right\}$$
+$$ V_{seuil_1} = V_{sat_-}\cdot \left( \frac{R4}{R4+R5} \right) $$
+$$ V_{seuil_2} = V_{sat_+}\cdot \left( \frac{R4}{R4+R5} \right) $$
 
 ### 2. Étude du bloc fonctionnel n°2 :
 ![alt text](image/image-6.png)
@@ -94,9 +95,9 @@ $$ V^- \cdot  \frac{R3+R2}{R2 \cdot R3} = \frac{V_{e_2} \cdot R3 + V_{s_2} \cdot
 
 $$ V^- = \frac{V_{e_2} \cdot R3+V_{s_2} \cdot R2}{R2 + R3} $$
 
-D'où $ \epsilon = V_e - \frac{V_{e_2} \cdot R3+V_{s_2} \cdot R2}{R2 + R3} $
+D'où $\epsilon = V_e - \frac{V_{e_2} \cdot R3+V_{s_2} \cdot R2}{R2 + R3}$
 
-On peut donc conclure pour le second cas que : $ \epsilon = - \frac{V_{e_2} \cdot R3+V_{s_2} \cdot R2}{R2 + R3} $
+On peut donc conclure pour le second cas que : $\epsilon = - \frac{V_{e_2} \cdot R3+V_{s_2} \cdot R2}{R2 + R3}$
 
 ### 3. Étude du bloc fonctionnel n°3 :
 Il s'agit d'un montage à AOP avec un condensateur dans la boucle de rétroaction.
