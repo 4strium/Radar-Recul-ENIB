@@ -85,7 +85,8 @@ La relation recherchée entre $R4$ et $R5$ est donc la suivante :
 $$ \frac{R4}{R4+R5} = \frac{1.61}{2.61} $$
 
 Par conséquent, en fixant arbitrairement $R4$, on peut déterminer $R5$ aisément :
-$$ R5 = \left( \frac{R4 \times 2.61}{1.61} \right) - R4$$
+
+$$ R5 = \left( \frac{R4 \times 2.61}{1.61} \right) - R4 $$
 
 ### 2. Étude du bloc fonctionnel n°2 :
 ![alt text](image/image-6.png)
