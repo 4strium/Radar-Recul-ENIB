@@ -98,19 +98,36 @@ Ici on va distinguer deux cas :
 Commençons donc par le premier cas :
 
 * $V_+ = V_{e_2}$
-* Potentiel des noeuds en $V^-$ :
+* Potentiel des noeuds en $V_-$ :
 
-$$ \frac{V_{e_2} - V^-}{R2} + \frac{V_{s_2}-V^-}{R3} =0 $$
+$$ \frac{V_{e_2} - V_-}{R2} + \frac{V_{s_2}-V_-}{R3} =0 $$
 
-$$ V^- \cdot \left( \frac{1}{R2}+\frac{1}{R3}\right) = \frac{V_{e_2}}{R2}+\frac{V_{s_2}}{R3} $$
+$$ V_- \cdot \left( \frac{1}{R2}+\frac{1}{R3}\right) = \frac{V_{e_2}}{R2}+\frac{V_{s_2}}{R3} $$
 
-$$ V^- \cdot  \frac{R3+R2}{R2 \cdot R3} = \frac{V_{e_2} \cdot R3 + V_{s_2} \cdot R2}{R2 \cdot R3} $$
+$$ V_{e_2} \cdot \left( \frac{1}{R2} + \frac{1}{R3}\right) - \frac{V_{e_2}}{R2} = \frac{V_{s_2}}{R3} $$
 
-$$ V^- = \frac{V_{e_2} \cdot R3+V_{s_2} \cdot R2}{R2 + R3} $$
+$$ \frac{V_{e_2}}{R3} = \frac{V_{s_2}}{R3} $$
 
-D'où $\epsilon = V_e - \frac{V_{e_2} \cdot R3+V_{s_2} \cdot R2}{R2 + R3}$
+Par conséquent à **l'état haut** on a $V_{e_2} = V_{s_2}$
 
-On peut donc conclure pour le second cas que : $\epsilon = - \frac{V_{e_2} \cdot R3+V_{s_2} \cdot R2}{R2 + R3}$
+Si l'on s'intéresse maintenant à **l'état bas** :
+* $V_+ = 0$
+* Potentiel des noeuds en $V_-$ :
+
+$$ \frac{V_{e_2} - V_-}{R2} + \frac{V_{s_2}-V_-}{R3} =0 $$
+
+$$ \frac{V_{e_2}}{R2}+\frac{V_{s_2}}{R3} = 0 $$
+
+$$ \frac{V_{s_2}}{R3} = -\frac{V_{e_2}}{R2} $$
+
+$$ V_{s_2} = -\frac{R3}{R2} \cdot V_{e_2} $$
+
+On rappelle que l'on cherche à avoir en sortie un signal carré, périodique et symétrique par rapport à 0. Au vu des équations que nous venons de déterminer il est nécessaire de choisir $R3=R2$, de cette façon nous aurons $V_{s_2} = V_{e_2}$ à **l'état haut** et inversement $V_{s_2} = -V_{e_2}$ à **l'état bas**.
+
+Dans toute la suite du projet on définira donc $R3=R2$.
+
+C'est bien ce que l'on retrouve en simulation :
+![alt text](image/image-9.png)
 
 ### 3. Étude du bloc fonctionnel n°3 :
 Il s'agit d'un montage à AOP avec un condensateur dans la boucle de rétroaction.
@@ -128,6 +145,10 @@ $$ \Leftrightarrow V_c(t) = \int \frac{V_{s_2}}{R6 \cdot C} dt $$
 $$ \Leftrightarrow V_c(t) = \frac{V_{s_2}}{R6 \cdot C} \cdot t $$
 
 On sait aussi que $V_{s_3}(t) = - V_c(t)$. Par exemple avec $V_{s_2} = 2V$ on obtient une pente de $-\frac{V_{s_2}}{C\cdot R6}\cdot t=-\frac{2}{(15\times10^{-9})\times18000} \cdot t=-7407t$ ou bien encore avec $V_{s_2} = -1V$ on obtient une pente de $-\frac{-1}{(15\times10^{-9})\times18000} \cdot t=3703t$.
+
+Ces résultats sont très intéressant car en connaissant la pente que l'on veut obtenir sur le signal de sortie du VCO on peut dimensionner de manière très fidèle $R6$ :
+
+$$ R6=\frac{V_{s_2}}{C \times pente} $$
 
 Ce qui correspond bien aux mesures en simulation :
 * Avec $V_{s_2} = 2V$ :
