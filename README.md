@@ -34,14 +34,21 @@ Pour répondre à cette problématique nous avons décomposer le système en deu
 ## III - Conditionneur
 Après nous être dans un premier temps tourné vers un circuit du type "*amplificateur inverseur*" couplé à un "*sommateur*", bien que ce dernier fournissait bien le résultat escompté, on s'est rendu compte qu'il y avait plus simple que d'utiliser deux AOP.
 
-![alt text](image/image-1.png)
-![alt text](image/image-2.png)
+<p align="center">
+    <img src="image\image-1.png" width="85%" height="auto">
+</p>
+
+<p align="center">
+    <img src="image\image-2.png" width="85%" height="auto">
+</p>
 
 On a finalement décidé d'utiliser un circuit "*amplificateur inverseur ET sommateur*".
 
 On obtient donc le schéma suivant :
 
-![alt text](image/image-3.png)
+<p align="center">
+    <img src="image\image-3.png" width="54%" height="auto">
+</p>
 
 On a les équations suivantes :
 * $V^+ = \frac{15}{24.8}$
@@ -60,7 +67,10 @@ $$ Vs=2.24-2.7 \cdot Ve $$
 ## IV - Étude des différents blocs élémentaires qui constituent le VCO
 
 ### 1. Étude du bloc fonctionnel n°1 :
-![alt text](image/image-5.png)
+
+<p align="center">
+    <img src="image\image-5.png" width="60%" height="auto">
+</p>
 
 On recherche les équations de fonctionnement de ce système :
 * $V^-=V_{s_3}$
@@ -99,7 +109,11 @@ Par conséquent, en fixant arbitrairement $R4$, on peut déterminer $R5$ aiséme
 $$ R5 = \left( \frac{R4 \times 2.61}{1.61} \right) - R4 $$
 
 ### 2. Étude du bloc fonctionnel n°2 :
-![alt text](image/image-6.png)
+
+<p align="center">
+    <img src="image\image-6.png" width="45%" height="auto">
+</p>
+
 
 Ici on va distinguer deux cas :
 * Le transistor commute de telle sorte que l'entrée non inverseuse l'AOP U1 correspond à $V_{e_2}$ c'est à dire $V_{eTRAN} = V_{e_2}$
@@ -137,12 +151,17 @@ On rappelle que l'on cherche à avoir en sortie un signal carré, périodique et
 Dans toute la suite du projet on définira donc $R3=R2$.
 
 C'est bien ce que l'on retrouve en simulation :
-![alt text](image/image-9.png)
+
+<p align="center">
+    <img src="image\image-9.png" width="80%" height="auto">
+</p>
 
 ### 3. Étude du bloc fonctionnel n°3 :
 Il s'agit d'un montage à AOP avec un condensateur dans la boucle de rétroaction.
 
-![alt text](image/image-7.png)
+<p align="center">
+    <img src="image\image-7.png" width="60%" height="auto">
+</p>
 
 L'expression littérale du courant $i(t)$ circulant dans le condensateur est : $i(t) = \frac{V_{s_2}}{R6}$
 
@@ -163,11 +182,15 @@ $$ R6=\frac{V_{s_2}}{C \times pente} $$
 Ce qui correspond bien aux mesures en simulation :
 * Avec $V_{s_2} = 2V$ :
 
-![alt text](image/image-8.png)
+<p align="center">
+    <img src="image\image-8.png" width="45%" height="auto">
+</p>
 
 * Avec $V_{s_2} = -1V$ :
 
-![alt text](image/image-4.png)
+<p align="center">
+    <img src="image\image-4.png" width="55%" height="auto">
+</p>
 
 ### V - Retour d'expérience
 Nous avons identifié les résistances permettant de jouer sur l'amplitude et la fréquence du signal de sortie, nous avons donc décidé de faire varier ces valeurs de résistance en utilisant des potentiomètres de $10k\Omega$
