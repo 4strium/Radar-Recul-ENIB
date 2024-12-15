@@ -11,9 +11,19 @@ Pour répondre à cette problématique nous avons décomposer le système en deu
 
 ## II - Présentation du matériel
 
-1) Capteur *MB1030 LV-MaxSonar-EZ3* :
-2) 4 * AOP *TL081*
+1) Capteur *MB1030 LV-MaxSonar-EZ3* : Il utilise des ondes ultrasonores pour mesurer la distance jusqu'à un objet.
+
+<p align="center">
+    <img src="image\image-14.png" width="70%" height="auto">
+</p>
+
+2) 4 × AOP *TL081* : ils seront tous alimentés de manière symétrique avec $Vcc_{+} = 15.0V$ et $Vcc_{-} = -15.0V$
 3) Transistor *2N7000*
+
+<p align="center">
+    <img src="image\image-13.png" width="30%" height="auto">
+</p>
+
 4) Condensateur 15nF
 5) Résistances
 6) Fils de connexion
@@ -158,3 +168,25 @@ Ce qui correspond bien aux mesures en simulation :
 * Avec $V_{s_2} = -1V$ :
 
 ![alt text](image/image-4.png)
+
+### V - Retour d'expérience
+Nous avons identifié les résistances permettant de jouer sur l'amplitude et la fréquence du signal de sortie, nous avons donc décidé de faire varier ces valeurs de résistance en utilisant des potentiomètres de $10k\Omega$
+
+### VI - Résultat final
+Après avoir câblé complètement le montage, on obtient le résultat suivant :
+
+<p align="center">
+    <img src="image\image-10.jpg" width="70%" height="auto">
+</p>
+
+Pour $D_{min} = 20cm$ soit une tension d'entrée continue de $0.074V$ le signal en sortie affiché sur l'oscilloscope est le suivant :
+
+<p align="center">
+    <img src="image\image-11.jpg" width="70%" height="auto">
+</p>
+
+Pour $D_{max} = 150cm$ soit une tension d'entrée continue de $0.575V$ le signal en sortie affiché sur l'oscilloscope est le suivant :
+
+<p align="center">
+    <img src="image\image-12.jpg" width="70%" height="auto">
+</p>
