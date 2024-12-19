@@ -193,13 +193,17 @@ Ce qui correspond bien aux mesures en simulation :
 </p>
 
 ### V - Retour d'expérience
-Nous avons identifié les résistances permettant de jouer sur l'amplitude et la fréquence du signal de sortie, nous avons donc décidé de faire varier ces valeurs de résistance en utilisant des potentiomètres de $10k\Omega$
+Nous avons identifié les résistances permettant de jouer sur l'amplitude ($R4$) et la fréquence du signal de sortie ($R6$), nous avons donc décidé de faire varier ces valeurs de résistance en utilisant des potentiomètres de $10k\Omega$.
 
 ### VI - Résultat final
 Après avoir câblé complètement le montage, on obtient le résultat suivant :
 
 <p align="center">
     <img src="image\image-10.jpg" width="70%" height="auto">
+</p>
+
+<p align="center">
+    <img src="image\image-15.jpg" width="50%" height="auto">
 </p>
 
 Pour $D_{min} = 20cm$ soit une tension d'entrée continue de $0.074V$ le signal en sortie affiché sur l'oscilloscope est le suivant :
